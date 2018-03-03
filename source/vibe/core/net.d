@@ -505,11 +505,6 @@ struct TCPConnection {
 			eventDriver.sockets.addRef(m_socket);
 	}
 
-	//~this()
-	//nothrow {
-		//if (m_socket != StreamSocketFD.invalid)
-			//eventDriver.sockets.releaseRef(m_socket);
-	//}
 
 	bool opCast(T)() const nothrow if (is(T == bool)) { return m_socket != StreamSocketFD.invalid; }
 
